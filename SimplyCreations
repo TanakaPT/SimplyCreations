@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Creations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            background: url('https://i.imgur.com/mAUQeFA.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            padding-top: 50px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header div {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        .button-link {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gallery-grid img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+    <script>
+        function openTab(tabName) {
+            var tabs = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div>Simply Creations</div>
+        <nav>
+            <a href="#" onclick="openTab('about')">Início</a>
+            <a href="#" onclick="openTab('services')">Serviços</a>
+            <a href="#" onclick="openTab('gallery')">Galeria</a>
+            <a href="#" onclick="openTab('acrilico')">Pintura Acrílica no Vidro</a>
+        </nav>
+        <a href="#" onclick="openTab('contact')" class="button-link">Entrar em Contato</a>
+    </header>
+
+    <div class="container">
+        <div id="about" class="tab-content active">
+            <section>
+                <h2>Sobre Mim</h2>
+                <p>Com a minha arte, busco representar as pessoas através de um estilo distinto de contornos, onde cada linha conta uma parte da sua história. Faço retratos personalizados que capturam a essência de quem são, de forma simples e expressiva. Além disso, adoro criar quadros infantis, personalizando-os com nomes e outros elementos que tornam cada obra única e especial para cada cliente.</p>
+            </section>
+        </div>
+
+        <div id="services" class="tab-content">
+            <section>
+                <h2>Serviços</h2>
+                <p>Ofereço uma variedade de serviços artísticos, incluindo retratos personalizados, quadros de super-heróis, e mais. Cada obra é adaptada às preferências individuais, garantindo uma peça única.</p>
+            </section>
+        </div>
+
+        <div id="gallery" class="tab-content">
+            <section>
+                <h2>Galeria</h2>
+                <p>Aqui estão algumas das minhas obras favoritas, em tamanho reduzido para facilitar a visualização.</p>
+                <div class="gallery-grid">
+                    <img src="https://i.imgur.com/bhAAjFF.jpg" alt="Obra Jawed">
+                    <img src="https://i.imgur.com/QHNri9D.jpg" alt="Obra Senhora">
+                    <img src="https://i.imgur.com/2R01MPu.jpg" alt="Obra Homem-Aranha">
+                    <img src="https://i.imgur.com/Ma9Rl9Z.jpg" alt="Obra Goku">
+                    <img src="https://i.imgur.com/YWkFcCE.jpg" alt="Obra Helena">
+                </div>
+            </section>
+        </div>
+
+        <div id="acrilico" class="tab-content">
+            <section>
+                <h2>Pintura Acrílica no Vidro</h2>
+                <p>A pintura acrílica no vidro é uma técnica que permite criar obras de arte vibrantes e duradouras. Utilizando tintas acrílicas especiais, é possível obter cores intensas e uma excelente aderência ao vidro, criando peças únicas e decorativas. Esta técnica é ideal para personalizar objetos de vidro, como jarras, copos, ou criar quadros com um toque moderno e elegante.</p>
+            </section>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <section>
+                <h2>Contato</h2>
+                <p>Para encomendar uma obra ou saber mais, entre em contato através dos seguintes meios:</p>
+                <ul>
+                    <li>Email: <a href="mailto:glasspainting69@gmail.com">glasspainting69@gmail.com</a></li>
+                    <li>Telefone: <a href="tel:+33626982597">+33626982597</a></li>
+                    <li>Facebook: <a href="https://facebook.com/simplycreations" target="_blank">facebook.com/simplycreations</a></li>
+                    <li>Instagram: <a href="https://instagram.com/simplycreations" target="_blank">instagram.com/simplycreations</a></li>
